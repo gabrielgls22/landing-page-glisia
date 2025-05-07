@@ -1,15 +1,16 @@
-// Script de funcionalidades da página
-
-// Quando o DOM estiver carregado, adiciona comportamento de toggle nas perguntas do FAQ
-document.addEventListener('DOMContentLoaded', function() {
-  // Seleciona todas as perguntas frequentes
-  var questions = document.querySelectorAll('.faq-question');
-  // Adiciona um evento de clique em cada pergunta
-  questions.forEach(function(q) {
-    q.addEventListener('click', function() {
-      // Alterna a classe 'active' no elemento pai (faq-item) para mostrar/ocultar a resposta
-      var faqItem = q.parentNode;
-      faqItem.classList.toggle('active');
-    });
+// script.js - Funções de interação e animações
+// Toggle do menu mobile (abre/fecha ao clicar no ícone)
+document.getElementById('navToggle').addEventListener('click', function() {
+  document.querySelector('.navbar').classList.toggle('nav-open');
+});
+// Fechar o menu mobile ao clicar em um link de navegação
+document.querySelectorAll('.nav-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.querySelector('.navbar').classList.remove('nav-open');
   });
+});
+// Inicialização da biblioteca AOS (animações ao scroll)
+AOS.init({
+  duration: 600, // duração das animações em ms
+  once: true     // executa a animação apenas uma vez em cada elemento
 });
