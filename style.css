@@ -88,6 +88,10 @@ a:hover {
   margin-left: 120px;
 }
 
+.hero-text h1 {
+  font-size: 4.5em;
+}
+
 .hero-text .tagline {
   font-size: 1.5em;
   margin-bottom: 1.5em;
@@ -128,17 +132,6 @@ a:hover {
 .btn:hover {
   background: #1DA851;
   transform: scale(1.05);
-}
-
-.secondary-btn {
-  background: transparent;
-  color: #25D366;
-  border: 2px solid #25D366;
-}
-
-.secondary-btn:hover {
-  background: #25D366;
-  color: #fff;
 }
 
 .about-section,
@@ -451,7 +444,7 @@ a:hover {
     gap: 8px;
   }
 
-  .btn, .secondary-btn {
+  .btn {
     font-size: 0.8em;
     padding: 8px 16px;
   }
