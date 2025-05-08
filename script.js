@@ -12,4 +12,23 @@ document.addEventListener('DOMContentLoaded', function() {
       faqItem.classList.toggle('active');
     });
   });
+})
+
+/* JavaScript para ativar animação ao scroll */
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.about-section, .hero-content').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+});
+
+window.addEventListener('scroll', () => {
+  document.querySelectorAll(' .services-section, .differentials-section, .faq-section, .cta-section').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
 });
